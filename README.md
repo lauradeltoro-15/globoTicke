@@ -1,1 +1,1 @@
-# globoTicke
+# globoTicket
