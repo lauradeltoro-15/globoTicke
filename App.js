@@ -8,7 +8,7 @@ import Home from './Home';
 import Tickets from './Tickets';
 
 const Stack = createStackNavigator();
-
+// Every component with a screen in the stack gets a navigation prop
 const App = () => {
   return (
     <>
@@ -23,7 +23,7 @@ const App = () => {
             component={Tickets}
             options={{
               headerTitleAlign: 'center',
-              headerTitleStyle: {fontFamily: 'Ubuntu-regular'}
+              headerTitleStyle: {fontFamily: 'Ubuntu-regular'},
             }}
           />
         </Stack.Navigator>
