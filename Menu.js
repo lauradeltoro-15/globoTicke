@@ -2,6 +2,20 @@ import React from 'react';
 import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
+const Menu = () => {
+  const navigation = useNavigation();
+
+  return (
+    <View style={styles.menu}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Tickets')}
+        style={styles.button}>
+        <Text style={styles.buttontext}>Events</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   menu: {
     flexDirection: 'row',
@@ -16,20 +30,5 @@ const styles = StyleSheet.create({
     fontFamily: 'Ubuntu-Regular',
   },
 });
-
-//TouchableOpacity is used for creating buttons
-const Menu = () => {
-  const navigation = useNavigation();
-
-  return (
-    <View style={styles.menu}>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Tickets')}
-        style={styles.button}
-      />
-      <Text style={styles.buttontext}>Events</Text>
-    </View>
-  );
-};
 
 export default Menu;

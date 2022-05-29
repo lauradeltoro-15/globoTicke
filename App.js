@@ -16,7 +16,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home" headerMode="screen">
           <Stack.Screen name="Home" options={{headerShown: false}}>
-            {props => <Home userName="Sports Fan" {...props} />}
+            {props => <Home username="Sports Fan" {...props} />}
           </Stack.Screen>
           <Stack.Screen
             name="Tickets"

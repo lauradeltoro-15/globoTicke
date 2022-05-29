@@ -1,44 +1,59 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
 
+import Menu from './Menu';
+
 const introText =
-  'Lorem ipsum dolor sit amet consectetur adipiscing elit nunc sodales, litora himenaeos ligula arcu massa montes cubilia tempus, nullam dis ad proin cursus ultricies aliquet condimentum. Molestie morbi pretium maecenas accumsan nam velit at, nibh cubilia est primis habitasse semper auctor, cum imperdiet sagittis pellentesque mollis per. Montes litora blandit phasellus nulla mi, porta lectus nisi nostra leo scelerisque, libero inceptos tortor taciti.';
+  'Are you ready for the best events? Whether you are into sports, music, or the most amazing seminars we have got you covered. Get ready to purchase great tickets at the best prices. Events are in-person and virtual.';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     alignItems: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+    flex: 1,
+  },
+  textcontainer: {
     padding: 20,
   },
-  textContainer: {
-    textAlign: 'center',
-    paddingTop: 10,
-  },
-  globoLogo: {
+  globologo: {
     height: 100,
-    width: 100,
+    width: 150,
   },
   title: {
     fontFamily: 'Ubuntu-Regular',
   },
   subtitle: {
-    fontFamily: 'Ubuntu-Regular',
     paddingTop: 5,
+    fontFamily: 'Ubuntu-Regular',
   },
   content: {
     fontFamily: 'Ubuntu-Light',
     fontWeight: '300',
+  },
+  heroimage: {
+    height: 170,
+    width: '100%',
+  },
+  menu: {
+    position: 'absolute',
+    bottom: 10,
   },
 });
 
 const Home = props => {
   return (
     <View style={styles.container}>
-      <Image style={styles.globoLogo} source={require('./images/logo.png')} />
+      <Image style={styles.globologo} source={require('./images/logo.png')} />
       <Text style={styles.title}>Welcome to GloboTicket</Text>
       <Text style={styles.subtitle}>{props.username}</Text>
+      <Image style={styles.heroimage} source={require('./images/boxing.jpg')} />
       <View style={styles.textContainer}>
         <Text style={styles.content}>{introText}</Text>
+      </View>
+      <View style={styles.menu}>
+        <Menu />
       </View>
     </View>
   );
